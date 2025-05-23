@@ -1,0 +1,51 @@
+<div class="container">
+    <h1>{{ title }}</h1>
+
+    <!-- Input for Food Name -->
+    <input
+      type="text"
+      [(ngModel)]="foodName"
+      placeholder="Enter food name "
+      class="food-input"
+    />
+    <button (click)="scanFood()" class="scan-button">  EverLeaf  </button>
+
+    <!-- Display Scanned Food and Alternative -->
+    <div *ngIf="nutritionalInfo && vegetarianAlternative" class="result-section">
+      <h2>Nutritional Comparison</h2>
+      <div class="comparison-container">
+        <!-- Scanned Food -->
+        <div>
+          <h3>FusionBites </h3>
+          <p><strong>Protein:</strong> {{ nutritionalInfo?.protein }}g</p>
+          <p><strong>Calories:</strong> {{ nutritionalInfo?.calories }} kcal</p>
+          <p><strong>Fat:</strong> {{ nutritionalInfo?.fat }}g</p>
+        </div>
+
+        <!-- Vegetarian Alternative -->
+        <div>
+          <h3>NutriGreens: {{ vegetarianAlternative }}</h3>
+          <p><strong>Protein:</strong> {{ matchingNutritionalInfo?.protein }}g</p>
+          <p><strong>Calories:</strong> {{ matchingNutritionalInfo?.calories }} kcal</p>
+          <p><strong>Fat:</strong> {{ matchingNutritionalInfo?.fat }}g</p>
+        </div>
+      </div>
+
+      <!-- Health Benefits -->
+      <h3>Health Benefits of {{ vegetarianAlternative }}</h3>
+      <p>{{ healthBenefits }}</p>
+
+      <!-- Ingredients -->
+      <h3>Ingredients</h3>
+      <ul>
+        <li *ngFor="let ingredient of ingredients">{{ ingredient }}</li>
+      </ul>
+
+      <!-- Cooking Method -->
+      <h3>Cooking Method</h3>
+      <ol>
+        <li *ngFor="let step of cookingMethod">{{ step }}</li>
+      </ol>
+    </div>
+    <router-outlet></router-outlet> <!-- ✅ Allows Angular to dynamically switch pages -->
+</div>

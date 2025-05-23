@@ -1,0 +1,45 @@
+<div class="container">
+    <h1>Veggie Scanner</h1>
+
+    <!-- Input for Food Name -->
+    <input type="text" [(ngModel)]="foodName" placeholder="Enter food name" class="food-input" />
+    <button (click)="fetchFood()" class="scan-button">Get Info</button>
+
+    <!-- Display Scanned Food and Vegetarian Alternative -->
+    <div *ngIf="foodData && vegetarianData" class="result-section">
+        <h2>Nutritional Comparison</h2>
+        <div class="comparison-container">
+            <!-- Scanned Food -->
+            <div>
+                <h3>{{ foodData.name }}</h3>
+                <p><strong>Protein:</strong> {{ foodData.nutrients?.protein }}g</p>
+                <p><strong>Calories:</strong> {{ foodData.nutrients?.calories }} kcal</p>
+                <p><strong>Fat:</strong> {{ foodData.nutrients?.fat }}g</p>
+            </div>
+
+            <!-- Vegetarian Alternative -->
+            <div *ngIf="vegetarianData.name">
+                <h3>Vegetarian Alternative: {{ vegetarianData.name }}</h3>
+                <p><strong>Protein:</strong> {{ vegetarianData.nutrients?.protein }}g</p>
+                <p><strong>Calories:</strong> {{ vegetarianData.nutrients?.calories }} kcal</p>
+                <p><strong>Fat:</strong> {{ vegetarianData.nutrients?.fat }}g</p>
+            </div>
+        </div>
+
+        <!-- Health Benefits -->
+        <h3>Health Benefits of {{ vegetarianData.name }}</h3>
+        <p>{{ vegetarianData.healthBenefits }}</p>
+
+        <!-- Ingredients -->
+        <h3>Ingredients</h3>
+        <ul>
+            <li *ngFor="let ingredient of vegetarianData.ingredients">{{ ingredient }}</li>
+        </ul>
+
+        <!-- Cooking Method -->
+        <h3>Cooking Method</h3>
+        <ol>
+            <li *ngFor="let step of vegetarianData.cookingMethod">{{ step }}</li>
+        </ol>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+body {
+  background-color: #bcb06e; /* ✅ Golden yellow */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+   background-color: #edde87;
+}
+
+h1 {
+  color: #561a7ec8;
+  font-size: 3em;
+}
+
+input.food-input {
+  width: 70%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 15px;
+  border: 1px solid #c16d6d;
+  font-size: 1em;
+}
+
+button.scan-button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #caad64;
+  color: rgba(19, 2, 29, 0.715);
+  border: none;
+  font-size: 1em;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button.scan-button:hover {
+  background-color: #bc9ed5;
+}
+
+.result-section {
+  margin-top: 30px;
+}
+
+.comparison-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+h2, h3 {
+  color: #413749;
+}
+
+p, li, ol {
+  font-size: 1em;
+  color: #383333;
+}
