@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Biryani",
+        "nutrients": {
+            "calories": 320,
+            "protein": 15,
+            "fat": 12,
+            "carbs": 40
+        },
+        "vegetarianAlternative": {
+            "name": "Veg Biryani",
+            "nutrients": {
+                "calories": 280,
+                "protein": 10,
+                "fat": 8,
+                "carbs": 45
+            }
+        },
+        "healthBenefits": "Rich in protein and fiber, boosts energy.",
+        "ingredients": ["basmati rice", "chicken/mixed vegetables", "spices", "yogurt"],
+        "cookingMethod": ["Marinate chicken/veggies", "Cook rice separately", "Layer and steam"]
+    },
+    {
+        "name": "Butter Chicken",
+        "nutrients": {
+            "calories": 450,
+            "protein": 30,
+            "fat": 25,
+            "carbs": 15
+        },
+        "vegetarianAlternative": {
+            "name": "Paneer Butter Masala",
+            "nutrients": {
+                "calories": 380,
+                "protein": 20,
+                "fat": 22,
+                "carbs": 18
+            }
+        },
+        "healthBenefits": "Good source of protein and healthy fats.",
+        "ingredients": ["chicken/paneer", "tomato puree", "cream", "spices"],
+        "cookingMethod": ["Prepare gravy", "Cook chicken/paneer", "Simmer and serve"]
+    },
+    {
+    "name": "Vada",
+    "nutrients": {
+        "calories": 200,
+        "protein": 5,
+        "fat": 10,
+        "carbs": 20
+    },
+    "vegetarianAlternative": {
+        "name": "Dal Vada",
+        "nutrients": {
+            "calories": 180,
+            "protein": 6,
+            "fat": 9,
+            "carbs": 18
+        }
+    },
+    "healthBenefits": "Provides good energy, rich in protein and fiber.",
+    "ingredients": ["lentils", "spices", "oil"],
+    "cookingMethod": ["Soak lentils", "Grind and mix with spices", "Shape and deep fry"]
+},
+    {
+        "name": "Fish Curry",
+        "nutrients": {
+            "calories": 320,
+            "protein": 25,
+            "fat": 10,
+            "carbs": 20
+        },
+        "vegetarianAlternative": {
+            "name": "Soyabean Curry",
+            "nutrients": {
+                "calories": 280,
+                "protein": 15,
+                "fat": 8,
+                "carbs": 22
+            }
+        },
+        "healthBenefits": "Omega-3 rich, improves brain function.",
+        "ingredients": ["fish/soyabean", "coconut milk", "spices"],
+        "cookingMethod": ["Marinate fish/soyabean", "Prepare curry base", "Simmer and serve"]
+    }
+]
